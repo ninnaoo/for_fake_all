@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background: #b30000;
+  color: white;
+  text-align: center;
+}
+.side-images {
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    width: 620px;
+    height: 820px;
+    overflow: hidden;
+    z-index: 10;
+}
+.side-image {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+    transform: translateX(120%);
+}
+.image-one {
+    animation: slideIn 1s ease forwards;
+    animation-delay: 0.1s;
+}
+.image-two {
+    animation: slideIn 1s ease forwards;
+    animation-delay: 0.4s;
+    z-index: 2;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(120%);
+    }
+    to {
+        transform: translateX(10%);
+    }
+}
+@media (max-width: 768px) {
+    .side-images {
+        width: 340px;
+        height: 480px;
+    }
+    .side-image {
+        border-radius: 15px 0 0 15px;
+    }
+}
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+    position: relative;
+}
+footer {
+    height: 20px;
+    background-color: blue;
+    z-index: 123456;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+  padding: 15px 25px;
+  background: black;
+  border-radius: 12px;
+  cursor: pointer;
+  animation: float 1.5s infinite;
+  z-index: 100;
+}
+@keyframes float {
+  0% { transform: translate(-50%, -50%) rotate(-2deg); }
+  50% { transform: translate(-50%, -50%) rotate(2deg); }
+  100% { transform: translate(-50%, -50%) rotate(-2deg); }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  padding: 20px;
+  border-radius: 15px;
+  z-index: 100;
+}
+.quote {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    transform: translateX(-120%);
+    background: black;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 0 15px 15px 0;
+    max-width: 300px;
+    z-index: 900;
+    animation: slideFromLeft 1s ease forwards;
+    animation-delay: 0.1s;
+}
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-120%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@media (max-width: 768px) {
+
+    .quote {
+        font-size: 14px;
+        max-width: 200px;
+        padding: 10px 15px;
+    }
+
+}

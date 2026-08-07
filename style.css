@@ -38,11 +38,11 @@ body {
 }
 .image-one {
     animation: slideIn 1s ease forwards;
-    animation-delay: .9s;
+    animation-delay: 0.7s;
 }
 .image-two {
     animation: slideIn 1s ease forwards;
-    animation-delay: 1.3s;
+    animation-delay: 1s;
     z-index: 2;
 }
 @keyframes slideIn {
@@ -182,7 +182,7 @@ footer {
     max-width: 300px;
     z-index: 900;
     animation: slideFromLeft 1s ease forwards;
-    animation-delay: 0.9s;
+    animation-delay: 0.7s;
     text-align: justify;
     line-height: 1.0;
     font-size: 15px;

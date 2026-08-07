@@ -43,8 +43,8 @@ body {
 }
 @media (max-width: 768px) {
     .side-images {
-        width: 90%;
-        height: 60%;
+        width: 90vw;
+        height: 122vw;
     }
     .side-image {
         border-radius: 15px 0 0 15px;
